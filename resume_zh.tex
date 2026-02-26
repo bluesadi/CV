@@ -1,0 +1,215 @@
+%-------------------------
+% 中文简历 - XeLaTeX
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{ctex}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% XeLaTeX natively supports Unicode, no need for pdfgentounicode
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemEx}[2]{
+  \item\small{
+    \textbf{#1}{：#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+
+  {\Large \textbf{刘一博}}
+  & 邮箱：\href{mailto:yiboliu@asu.edu}{yiboliu@asu.edu} \\
+
+  \small
+  \faGithub\ \href{https://github.com/bluesadi}{34r7hm4n}
+  \quad
+  \faGraduationCap\ \href{https://scholar.google.com/citations?user=Ckof_x4AAAAJ&hl=en}{Google Scholar}
+  & \small 电话：\href{tel:+15052102247}{+1-505-210-2247} \\
+
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{教育经历}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {亚利桑那州立大学}{坦佩，亚利桑那州}
+      {计算机科学博士研究生，导师：Ruoyu Wang 博士}{2023年8月 -- 至今}
+    \resumeSubheading
+      {四川大学}{成都，中国}
+      {网络空间安全 学士}{2019年9月 -- 2023年6月}
+  \resumeSubHeadingListEnd
+
+\section{研究兴趣}
+ \resumeSubHeadingListStart
+   \resumeItem{反编译\vspace{-4pt}}
+   \resumeItem{二进制分析\vspace{-4pt}}
+   \resumeItem{程序分析\vspace{-4pt}}
+   \resumeItem{漏洞挖掘\vspace{-4pt}}
+ \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{工作与研究经历}
+ \resumeSubHeadingListStart
+\resumeSubheading
+  {Shellphish}{坦佩，亚利桑那州}
+  {团队成员，逆向工程方向}{2023年8月 -- 至今}
+    \resumeItemListStart
+      \resumeItem{作为逆向工程手参加国际 CTF 竞赛，包括 DEF CON CTF 决赛。}
+    \resumeItemListEnd
+\resumeSubheading
+  {香港中文大学}{中国香港}
+  {研究助理，导师：Sze Yiu Chau 博士}{2022年8月 -- 2022年12月}
+  \resumeItemListStart
+    \resumeItem{研究固件中安全关键 API 的误用及其对软件安全的影响。}
+    \resumeItem{评估了当前最先进的静态分析工具，发现了其中显著的不准确性和可用性问题。}
+    \resumeItem{分析了错误报告的根本原因，并合著论文 \textit{Towards Precise Reporting of Cryptographic Misuses}（NDSS 2024，第二作者）。}
+  \resumeItemListEnd
+ \resumeSubheading
+      {0x401 战队}{成都，中国}
+      {团队成员，逆向工程方向}{2020年10月 -- 2023年6月}
+      \resumeItemListStart
+        \resumeItem{作为逆向工程手参加区域及全国性 CTF 竞赛。}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{项目经历}
+  \resumeSubHeadingListStart
+\resumeSubheading
+  {Oxidizer}{}
+  {面向 Rust 的反编译器}{2023年12月 -- 至今}
+  \resumeItemListStart
+    \resumeItem{
+      对使用现有 C 反编译器处理 Rust 二进制文件时遇到的 Rust 特有反编译难题进行了实证研究，
+      识别了由语言和编译器引入的关键障碍。
+    }
+    \resumeItem{
+      设计了一套新颖的 Rust 反编译流水线，并实现了多项技术来解决上述挑战，
+      为后续改进和扩展奠定了基础。
+    }
+  \resumeItemListEnd
+ \resumeSubheading
+      {Pluto}{\href{https://github.com/bluesadi/Pluto}{bluesadi/Pluto}}
+      {基于 LLVM 的代码混淆器}{2021年6月 -- 2024年1月}
+      \resumeItemListStart
+        \resumeItem{Pluto 在编译时将源代码转换为功能等价但更加复杂的形式，保护软件免受逆向破解。}
+        \resumeItemEx{数据混淆}{指令替换、字符串加密、混合布尔算术混淆}
+        \resumeItemEx{控制流混淆}{控制流平坦化、虚假控制流、间接调用混淆}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{技能}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{编程语言}{：C/C++、Java、Python、Kotlin、Rust}
+   }
+\item{
+  \textbf{安全技能}{：反编译、逆向工程、程序分析与二进制分析；
+  具有使用 angr、LLVM 等工具解决实际安全问题的实践经验}
+}
+ \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------------
+\section{学术发表}
+\resumeSubHeadingListStart
+
+  \resumeItem{
+    \textbf{BuildBench: Benchmarking LLM Agents on Compiling Real-World Open-Source Software}.\\
+    Zehua Zhang, Ati Priya Bajaj, Divij Handa, Siyu Liu, Arvind S. Raj,
+    Hongkai Chen, Hulin Wang, \textbf{Yibo Liu}, Zion Basque,
+    Souradip Nath, Vishal Juneja, Nikhil Chapre, Yan Shoshitaishvili,
+    Adam Doup\'e, Chitta Baral, Ruoyu Wang.\\
+    \textit{arXiv preprint}, 2025.
+  }
+
+  \resumeItem{
+    \textbf{TYGR: Type Inference on Stripped Binaries using Graph Neural Networks}.\\
+    Chang Zhu*, Ziyang Li*, Anton Xue, Ati Priya Bajaj, Wil Gibbs, \textbf{Yibo Liu},
+    Rajeev Alur, Tiffany Bao, Hanjun Dai, Adam Doup\'e, Mayur Naik,
+    Yan Shoshitaishvili, Ruoyu Wang, Aravind Machiry.\\
+    \textit{33rd USENIX Security Symposium (USENIX Security)}, 2024.\\
+    \textit{(* equal contribution)}
+  }
+
+  \resumeItem{
+    \textbf{Fuzz to the Future: Uncovering Occluded Future Vulnerabilities via Robust Fuzzing}.\\
+    Arvind S. Raj, Wil Gibbs, Fangzhou Dong, Jayakrishna Menon Vadayath,
+    Michael Tompkins, Steven Wirsz, \textbf{Yibo Liu}, Zhenghao Hu,
+    Chang Zhu, Gokulkrishna Praveen Menon, Brendan Dolan-Gavitt,
+    Adam Doup\'e, Ruoyu Wang, Yan Shoshitaishvili, Tiffany Bao.\\
+    \textit{ACM SIGSAC Conference on Computer and Communications Security (CCS)}, 2024.
+  }
+
+  \resumeItem{
+    \textbf{Towards Precise Reporting of Cryptographic Misuses}.\\
+    Yuchen Chen, \textbf{Yibo Liu}, Kaiyuan Wu, Duc Van Le, Sze Yiu Chau.\\
+    \textit{Network and Distributed System Security Symposium (NDSS)}, 2024.
+  }
+
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
