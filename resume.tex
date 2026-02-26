@@ -1,0 +1,252 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemEx}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+
+  {\Large \textbf{Yibo Liu}}
+  & Email: \href{mailto:yiboliu@asu.edu}{yiboliu@asu.edu} \\
+
+  \small
+  \faGithub\ \href{https://github.com/bluesadi}{34r7hm4n}
+  \quad
+  \faGraduationCap\ \href{https://scholar.google.com/citations?user=Ckof_x4AAAAJ&hl=en}{Google Scholar}
+  & \small Mobile: \href{tel:+15052102247}{+1-505-210-2247} \\
+
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Arizona State University}{Tempe, AZ}
+      {PhD student in Computer Science, advised by Dr. Ruoyu Wang}{August 2023 -- Present}
+    \resumeSubheading
+      {Sichuan University}{Chengdu, China}
+      {Bachelor in Cybersecurity}{September 2019 -- June 2023}
+  \resumeSubHeadingListEnd
+
+\section{Research Interests}
+ \resumeSubHeadingListStart
+   \resumeItem{Decompilation\vspace{-4pt}}
+   \resumeItem{Binary Analysis\vspace{-4pt}}
+   \resumeItem{Program Analysis\vspace{-4pt}}
+   \resumeItem{Vulnerability Discovery\vspace{-4pt}}
+ \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+ \resumeSubHeadingListStart
+\resumeSubheading
+  {Shellphish}{Tempe, AZ}
+  {Team Member, Reverse Engineering}{August 2023 - Present}
+    \resumeItemListStart
+      \resumeItem{Participated as a reverse engineer in international CTF competitions, including the DEF CON CTF Finals.}
+    \resumeItemListEnd
+\resumeSubheading
+  {Chinese University of Hong Kong}{Hong Kong SAR, China}
+  {Research Assistant, advised by Dr. Sze Yiu Chau}{August 2022 -- December 2022}
+  \resumeItemListStart
+    \resumeItem{Studied security-critical API misuses in firmware and their implications for software security.}
+    \resumeItem{Evaluated state-of-the-art static analysis tools and identified significant inaccuracies and usability limitations.}
+    \resumeItem{Analyzed root causes of incorrect reports and co-authored \textit{Towards Precise Reporting of Cryptographic Misuses} (NDSS 2024, second author).}
+  \resumeItemListEnd
+ \resumeSubheading
+      {0x401 Team}{Chengdu, China}
+      {Team Member, Reverse Engineering} {October 2020 - June 2023}
+      \resumeItemListStart
+        \resumeItem{Participated as a reverse engineer in regional and national CTF competitions.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+\resumeSubheading
+  {Oxidizer}{}
+  {A Rust-oriented Decompiler}{December 2023 - Present}
+  \resumeItemListStart
+    \resumeItem{
+      Conducted an empirical study of Rust-specific decompilation challenges when applying
+      state-of-the-art C decompilers to Rust binaries, and identified key language- and
+      compiler-induced obstacles.
+    }
+    \resumeItem{
+      Designed a novel Rust decompilation pipeline and implemented multiple techniques to
+      address these challenges, providing a foundation for future improvements and extensions.
+    }
+  \resumeItemListEnd
+ \resumeSubheading
+      {Pluto}{\href{https://github.com/bluesadi/Pluto}{bluesadi/Pluto}}
+      {An obfuscator based on LLVM} {June 2021 - January 2024}
+      \resumeItemListStart
+        \resumeItem{Pluto converts the source code into a functionally equivalent but much more complicated form at compile-time, protecting your software from being cracked.}
+        \resumeItemEx{Data Obfuscaton}{Substitution, String Encryption, Mixed Boolean-Arithmetic Obfuscation}
+        \resumeItemEx{Control Flow Obfuscaton}{Flattening, Bogus Control Flow, Indirect Call Obfuscation}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Programming Languages}{: C/C++, Java, Python, Kotlin, Rust}
+   }
+\item{
+  \textbf{Security Skills}{: Decompilation, Reverse Engineering, Program \& Binary Analysis;
+  practical experience using tools such as angr and LLVM to solve real-world security problems}
+}
+ \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------------
+\section{Publications}
+\resumeSubHeadingListStart
+
+  \resumeItem{
+    \textbf{BuildBench: Benchmarking LLM Agents on Compiling Real-World Open-Source Software}.\\
+    Zehua Zhang, Ati Priya Bajaj, Divij Handa, Siyu Liu, Arvind S. Raj,
+    Hongkai Chen, Hulin Wang, \textbf{Yibo Liu}, Zion Basque,
+    Souradip Nath, Vishal Juneja, Nikhil Chapre, Yan Shoshitaishvili,
+    Adam Doup\'e, Chitta Baral, Ruoyu Wang.\\
+    \textit{arXiv preprint}, 2025.
+  }
+
+  \resumeItem{
+    \textbf{TYGR: Type Inference on Stripped Binaries using Graph Neural Networks}.\\
+    Chang Zhu*, Ziyang Li*, Anton Xue, Ati Priya Bajaj, Wil Gibbs, \textbf{Yibo Liu},
+    Rajeev Alur, Tiffany Bao, Hanjun Dai, Adam Doup\'e, Mayur Naik,
+    Yan Shoshitaishvili, Ruoyu Wang, Aravind Machiry.\\
+    \textit{33rd USENIX Security Symposium (USENIX Security)}, 2024.\\
+    \textit{(* equal contribution)}
+  }
+
+  \resumeItem{
+    \textbf{Fuzz to the Future: Uncovering Occluded Future Vulnerabilities via Robust Fuzzing}.\\
+    Arvind S. Raj, Wil Gibbs, Fangzhou Dong, Jayakrishna Menon Vadayath,
+    Michael Tompkins, Steven Wirsz, \textbf{Yibo Liu}, Zhenghao Hu,
+    Chang Zhu, Gokulkrishna Praveen Menon, Brendan Dolan-Gavitt,
+    Adam Doup\'e, Ruoyu Wang, Yan Shoshitaishvili, Tiffany Bao.\\
+    \textit{ACM SIGSAC Conference on Computer and Communications Security (CCS)}, 2024.
+  }
+
+  \resumeItem{
+    \textbf{Towards Precise Reporting of Cryptographic Misuses}.\\
+    Yuchen Chen, \textbf{Yibo Liu}, Kaiyuan Wu, Duc Van Le, Sze Yiu Chau.\\
+    \textit{Network and Distributed System Security Symposium (NDSS)}, 2024.
+  }
+
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
