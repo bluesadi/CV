@@ -1,5 +1,5 @@
-TEX = resume.tex
-TEX_ZH = resume_zh.tex
+TEX = CV.tex
+TEX_ZH = CV_zh.tex
 PDF = CV_Yibo_Liu.pdf
 PDF_ZH = CV_Yibo_Liu_zh.pdf
 
