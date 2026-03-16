@@ -3,9 +3,11 @@ TEX_ZH = CV_zh.tex
 PDF = CV_Yibo_Liu.pdf
 PDF_ZH = CV_Yibo_Liu_zh.pdf
 
-.PHONY: all zh clean
+.PHONY: en all zh clean
 
-all: $(PDF)
+en: $(PDF)
+
+all: $(PDF) $(PDF_ZH)
 
 zh: $(PDF_ZH)
 
